@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'type' => 'drupal-module',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => '74c4302b0e5893e877162d13c8d7a1f73f001a3b',
+        'name' => 'jnmist/drupal8-commerce2-offsite-gateway-example',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'gingerpayments/ginger-php' => array(
+            'pretty_version' => '2.2.0',
+            'version' => '2.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../gingerpayments/ginger-php',
+            'aliases' => array(),
+            'reference' => '38c32c48a4ce0e5344bbf591419803d0135e08d4',
+            'dev_requirement' => false,
+        ),
+        'gingerpayments/ginger-plugin-sdk' => array(
+            'pretty_version' => '1.4.4',
+            'version' => '1.4.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../gingerpayments/ginger-plugin-sdk',
+            'aliases' => array(),
+            'reference' => '9419407e9b879955661e8672cb0cb4cc8e62c063',
+            'dev_requirement' => false,
+        ),
+        'jnmist/drupal8-commerce2-offsite-gateway-example' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '74c4302b0e5893e877162d13c8d7a1f73f001a3b',
+            'dev_requirement' => false,
+        ),
+    ),
+);
