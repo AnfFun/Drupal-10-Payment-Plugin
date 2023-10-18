@@ -1,4 +1,4 @@
-# BANKNAME plugin for Drupal 10 and Commerce 2.x
+# BANKNAME plugin for Drupal 9/10 and Commerce 2.x
 
 ## About
 This is the BANKNAME plugin.
@@ -34,7 +34,7 @@ The ideal online payment page for your webshop:
 
 ## Requirements:
 - PHP v8.x
-- Drupal 10 and Commerce 2.x
+- Drupal 9 || 10 and Commerce 2.x
 
 ## Supported methods ##
 * Afterpay
