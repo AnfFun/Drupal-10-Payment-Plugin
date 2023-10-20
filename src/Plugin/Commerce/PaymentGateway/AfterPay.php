@@ -22,29 +22,28 @@ class AfterPay extends BaseOffsitePaymentGateway
 {
 
 
-  /**
-   * Checks whether the given payment can be captured.
-   *
-   * @param \Drupal\commerce_payment\Entity\PaymentInterface $payment
-   *   The payment to capture.
-   *
-   * @return bool
-   *   TRUE if the payment can be captured, FALSE otherwise.
-   */
-  public function canCapturePayment(PaymentInterface $payment)
-  {
-    return true;
-  }
+    /**
+     * Checks whether the given payment can be captured.
+     *
+     * @param \Drupal\commerce_payment\Entity\PaymentInterface $payment
+     *   The payment to capture.
+     *
+     * @return bool
+     *   TRUE if the payment can be captured, FALSE otherwise.
+     */
+    public function canCapturePayment(PaymentInterface $payment)
+    {
+        return true;
+    }
 
-  public function prepareForm(array $form)
-  {
-    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-
-    $form = $this->helper->setBirthday($form);
-    $form = $this->helper->setGender($form);
-    $link = Bankconfig::getAfterPayTermsLink($language);
-    $form = $this->helper->setTermsLink($form, $link);
-    $form = $this->helper->setDefaultButtons($form);
-    return $form;
-  }
+    public function prepareForm(array $form)
+    {
+        $language = Drupal::languageManager()->getCurrentLanguage()->getId();
+        $form = $this->helper->setBirthday($form);
+        $form = $this->helper->setGender($form);
+        $link = Bankconfig::getAfterPayTermsLink($language);
+        $form = $this->helper->setTermsLink($form, $link);
+        $form = $this->helper->setDefaultButtons($form);
+        return $form;
+    }
 }

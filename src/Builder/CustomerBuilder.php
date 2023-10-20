@@ -1,6 +1,7 @@
 <?php
 
 namespace Drupal\commerce_ginger\Builder;
+use Drupal;
 use GingerPluginSdk\Collections\AdditionalAddresses;
 use GingerPluginSdk\Collections\PhoneNumbers;
 use GingerPluginSdk\Entities\Address;
@@ -34,8 +35,9 @@ class CustomerBuilder extends ClientBuilder
 
   public function getLangCode($payment)
   {
-    return $payment->getOrder()->getBillingProfile()->get('address')->getValue()[0]['langcode'];
+    return Drupal::languageManager()->getCurrentLanguage()->getId();
   }
+
 
   public function getAdditionalAddresses($payment)
   {

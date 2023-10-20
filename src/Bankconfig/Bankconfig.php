@@ -13,9 +13,9 @@ use Symfony\Component\Yaml\Yaml;
 
 class Bankconfig
 {
-  const PLATFORM_NAME = 'Drupal9';
+  const PLATFORM_NAME = 'Drupal10';
 
-  const PLUGIN_NAME = 'ems-online-drupal9';
+  const PLUGIN_NAME = 'ems-online-drupal10';
 
   const ENDPOINT = 'https://api.dev.gingerpayments.com';
 
